@@ -1,0 +1,30 @@
+nav{
+  background-color: #622777;
+}
+
+.nav-brand-img{
+  width: 3rem;
+  user-select: none;
+}
+
+.book_svg{
+  width: 80%;
+  user-select: none;
+}
+
+body{
+  background-image: linear-gradient(to right bottom, #9d5434, #9d5836, #9d5c39, #9c5f3b, #9c633e, #915a3d, #85523c, #794a3a, #5c3731, #3f2626, #221718, #000000);
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background static during scrolling */
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.login-btn{
+  text-decoration: none;
+}
+
+::selection{
+  background-color: #6733aa;
+  color: #ffffff;
+}
