@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const notify = () => toast("Logout Successfully !");
+  // const notify = () => toast("Logout Successfully !");
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -27,19 +27,21 @@ const Header = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link text-white" to="/login">
-                Admin Login
+                School Login
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link text-white" to="/signup">
                 Sign Up
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
-              <Link className="nav-link text-white" to="/" onClick={notify}>
-                Log Out
+              <Link className="nav-link text-white" to="/students/marksheet" 
+              // onClick={notify}
+              >
+                Generate Marksheet
               </Link>
-              <ToastContainer theme="dark" />
+              {/* <ToastContainer theme="dark" /> */}
             </li>
           </ul>
         </div>
