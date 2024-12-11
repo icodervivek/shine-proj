@@ -22,7 +22,7 @@ const Login = () => {
   return (
     <>
     <form className="container bg-white mt-5 rounded p-5" method="get">
-      <h3 className="text-center text-primary">Admin Login</h3>
+      <h3 className="text-center text-primary">School Login</h3>
       <div className="mb-3">
         <input
           type="email"
