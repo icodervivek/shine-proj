@@ -42,7 +42,6 @@ const DashboardDesc = () => {
       <div className="row m-5 text-center p-4">
         <div className="col-md-4 m-auto desc_section">
           <h5>Total Number of Students - {studentCount}</h5>
-          <h6>Class Wise Distribution</h6>
           {classData.labels && classData.labels.length > 0 && (
             <Doughnut
              style={{ width: "100px", height: "100px" }}
