@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 
 const studentSchema = new mongoose.Schema(
   {
+    student_id: {
+      type: Number,
+      unique: true,
+    },
     name: {
       type: String,
       required: [true, "Student's name is required."],
@@ -79,6 +83,20 @@ const studentSchema = new mongoose.Schema(
     timestamps: true, // Adds createdAt and updatedAt fields automatically
   }
 );
+
+studentSchema.pre("save", async function (next) {
+  const doc = this;
+
+  if (!doc.isNew) return next(); // Skip if not a new document
+
+  try {
+    const count = await mongoose.model("Student").countDocuments();
+    doc.student_id = count + 1; // Set student_id to current count + 1
+    next();
+  } catch (err) {
+    next(err);
+  }
+});
 
 const Student = mongoose.model("Student", studentSchema);
 
